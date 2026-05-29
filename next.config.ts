@@ -1,23 +1,18 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/linktree-alternative" : "";
+// Use basePath only when explicitly deploying to GitHub Pages
+const isGitHubPages = process.env.DEPLOY_TARGET === "github-pages";
+const basePath = isGitHubPages ? "/linktree-alternative" : "";
 
 const nextConfig: NextConfig = {
-  // Static export for GitHub Pages
-  output: "export",
-
-  // GitHub Pages subpath — only applied in production builds
   basePath,
   assetPrefix: basePath ? `${basePath}/` : "",
 
-  // Disable image optimization for static export
   images: {
     unoptimized: true,
   },
 
-  // Headers only apply to server deployments (Vercel, etc.)
-  // For static export, these are ignored
+  // Security headers (active on Vercel, ignored on static export)
   headers: async () => [
     {
       source: "/:path*",

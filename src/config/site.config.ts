@@ -341,9 +341,7 @@ export const siteConfig: SiteConfig = {
 
 /** Get the base path for assets (used in components) */
 export const getBasePath = () => {
-  // In development or when basePath is not set, return empty string
-  // In production with GitHub Pages, this should match next.config.ts basePath
-  return process.env.NODE_ENV === "production" ? "/linktree-alternative" : "";
+  return process.env.DEPLOY_TARGET === "github-pages" ? "/linktree-alternative" : "";
 };
 
 /** Prepend base path to asset URLs */
