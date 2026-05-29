@@ -120,14 +120,14 @@ export interface SiteConfig {
 // ============================================
 
 // Common tag styles for reuse
-const COMMON_TAG_STYLES = { bg: "#f5f5f5", text: "#414651" };
+const COMMON_TAG_STYLES = { bg: "#f0f0f0", text: "#414651" };
 
-// Category colors for primary tags (accessible with white text)
-const CATEGORY_COLORS = {
-  Productivity: "#5326ab",
-  Design: "#e64400",
-  Coding: "#007acc",
-  Content: "#158f4a",
+// GymBuddy India category colors
+const GYM_TAG_COLORS = {
+  Training: "#455218",
+  Nutrition: "#2d5a1b",
+  Tools: "#1a4020",
+  Platform: "#c0ff72",
 };
 
 export const siteConfig: SiteConfig = {
@@ -135,8 +135,9 @@ export const siteConfig: SiteConfig = {
   // METADATA
   // ============================================
   metadata: {
-    title: "Your Name | Links",
-    description: "All my important links in one place",
+    title: "GymBuddy India | Links",
+    description:
+      "India's fitness social network — workout plans, food database, exercise library and more.",
     favicon: "/favicon.png",
   },
 
@@ -144,7 +145,6 @@ export const siteConfig: SiteConfig = {
   // ANALYTICS
   // ============================================
   analytics: {
-    // Leave empty to disable Google Analytics
     googleAnalyticsId: "",
   },
 
@@ -152,24 +152,21 @@ export const siteConfig: SiteConfig = {
   // BRANDING
   // ============================================
   branding: {
-    // Set to null to hide logo, or provide path like "/images/logo.svg"
-    logo: "/images/logo_wordmark_charcoal.svg",
-    logoAlt: "Open Session",
-    websiteUrl: "https://opensession.co",
-    tagline: "Your tagline goes here.",
-    email: "hello@example.com",
-    copyrightYear: "2024",
+    logo: "/images/gymbuddy_logo.png",
+    logoAlt: "GymBuddy India",
+    websiteUrl: "https://gymbuddyindia.com/",
+    tagline: "India's Fitness Social Network",
+    email: "gymbuddyindia@gmail.com",
+    copyrightYear: "2025",
   },
 
   // ============================================
   // FEATURES
   // ============================================
   features: {
-    // Toggle the animated CRT terminal background
     crtEffect: true,
-    crtTint: "#FFFAEE",
-    crtBrightness: 0.08,
-    // Show subscribe modal before opening resources
+    crtTint: "#c0ff72",
+    crtBrightness: 0.05,
     subscribeModal: false,
   },
 
@@ -177,21 +174,21 @@ export const siteConfig: SiteConfig = {
   // THEME COLORS
   // ============================================
   theme: {
-    // Primary accent color (used for buttons, links, highlights)
-    accentColor: "#fe5102", // Aperol Orange - change to your brand color
-    // Dark mode background
-    darkBg: "#191919",
-    // Light mode background
-    lightBg: "#FFFAEE",
+    accentColor: "#c0ff72",
+    darkBg: "#0e1a02",
+    lightBg: "#ffffff",
   },
 
   // ============================================
   // NAVIGATION
   // ============================================
   nav: [
-    { id: "nav-1", label: "Insert", href: "#" },
-    { id: "nav-2", label: "Insert", href: "#" },
-    { id: "nav-3", label: "Insert", href: "#" },
+    { id: "nav-1", label: "Workout Plan", href: "https://tally.so/r/wLBV1j" },
+    { id: "nav-2", label: "Website", href: "https://gymbuddyindia.com/" },
+    { id: "nav-3", label: "Food Database", href: "https://gymbuddyindia.com/food-database" },
+    { id: "nav-4", label: "Exercise Library", href: "https://gymbuddyindia.com/exercises/" },
+    { id: "nav-5", label: "Fitness Calculators", href: "https://gymbuddyindia.com/tools" },
+    { id: "nav-6", label: "Workout Templates", href: "https://gymbuddyindia.com/templates" },
   ],
 
   // ============================================
@@ -199,44 +196,20 @@ export const siteConfig: SiteConfig = {
   // ============================================
   socialLinks: [
     {
-      id: "figma",
-      platform: "figma",
-      title: "Figma",
-      handle: "@handle",
-      url: "#",
-      icon: "figma",
-    },
-    {
-      id: "github",
-      platform: "github",
-      title: "Github",
-      handle: "@handle",
-      url: "#",
-      icon: "github",
-    },
-    {
-      id: "substack",
-      platform: "substack",
-      title: "Substack",
-      handle: "@handle",
-      url: "#",
-      icon: "substack",
-    },
-    {
       id: "instagram",
       platform: "instagram",
-      title: "Insta",
-      handle: "@handle",
-      url: "#",
+      title: "Instagram",
+      handle: "@gymbuddyindia",
+      url: "https://instagram.com/gymbuddyindia",
       icon: "instagram",
     },
     {
-      id: "medium",
-      platform: "medium",
-      title: "Medium",
-      handle: "@handle",
-      url: "#",
-      icon: "medium",
+      id: "website",
+      platform: "custom",
+      title: "Website",
+      handle: "gymbuddyindia.com",
+      url: "https://gymbuddyindia.com/",
+      icon: "custom",
     },
   ],
 
@@ -245,212 +218,108 @@ export const siteConfig: SiteConfig = {
   // ============================================
   resources: [
     {
-      id: "project-1",
-      title: "Insert title",
+      id: "workout-plan",
+      title: "Personalised Workout Plan",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Get a custom workout plan tailored to your goals, fitness level, and schedule.",
       badge: "live",
-      link: "https://example.com/project-1",
-      buttonLabel: "Link",
+      link: "https://tally.so/r/wLBV1j",
+      buttonLabel: "Get Your Plan",
     },
     {
-      id: "project-2",
-      title: "Insert title",
+      id: "food-database",
+      title: "Indian Food Database",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Track macros and calories with India's most comprehensive food nutrition database.",
       badge: "live",
-      link: "https://example.com/project-2",
-      buttonLabel: "Link",
+      link: "https://gymbuddyindia.com/food-database",
+      buttonLabel: "Browse Foods",
     },
     {
-      id: "project-3",
-      title: "Insert title",
+      id: "exercise-library",
+      title: "Exercise Library",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      badge: "coming-soon",
-      link: "#",
-      buttonLabel: "Link",
+        "Explore hundreds of exercises with step-by-step instructions and muscle group breakdowns.",
+      badge: "live",
+      link: "https://gymbuddyindia.com/exercises/",
+      buttonLabel: "Explore",
     },
   ],
 
   // ============================================
-  // TOOLS / TECH STACK
+  // TOOLS / FEATURES
   // ============================================
   tools: [
     {
-      id: "tool-1",
-      name: "Insert title",
+      id: "workout-plan-tool",
+      name: "Workout Plan",
       icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      url: "https://tally.so/r/wLBV1j",
+      description:
+        "Get a personalised workout plan tailored to your goals and fitness level — free.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Productivity, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Training", bg: GYM_TAG_COLORS.Training, text: "#c0ff72" },
+        { label: "Free", ...COMMON_TAG_STYLES },
       ],
     },
     {
-      id: "tool-2",
-      name: "Insert title",
+      id: "food-database-tool",
+      name: "Food Database",
       icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      url: "https://gymbuddyindia.com/food-database",
+      description:
+        "India's most comprehensive food nutrition database for tracking macros and calories.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Coding, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Nutrition", bg: GYM_TAG_COLORS.Nutrition, text: "#c0ff72" },
+        { label: "Free", ...COMMON_TAG_STYLES },
       ],
     },
     {
-      id: "tool-3",
-      name: "Insert title",
+      id: "exercise-library-tool",
+      name: "Exercise Library",
       icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      url: "https://gymbuddyindia.com/exercises/",
+      description:
+        "Browse hundreds of exercises with instructions and muscle group breakdowns.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Design, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Training", bg: GYM_TAG_COLORS.Training, text: "#c0ff72" },
+        { label: "Reference", ...COMMON_TAG_STYLES },
       ],
     },
     {
-      id: "tool-4",
-      name: "Insert title",
+      id: "calculators-tool",
+      name: "Fitness Calculators",
       icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      url: "https://gymbuddyindia.com/tools",
+      description:
+        "Calculate BMI, TDEE, macros, and more with our suite of fitness tools.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Content, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Tools", bg: GYM_TAG_COLORS.Tools, text: "#c0ff72" },
+        { label: "Free", ...COMMON_TAG_STYLES },
       ],
     },
     {
-      id: "tool-5",
-      name: "Insert title",
+      id: "templates-tool",
+      name: "Workout Templates",
       icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      url: "https://gymbuddyindia.com/templates",
+      description:
+        "Ready-to-use workout templates for different goals and experience levels.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Productivity, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Training", bg: GYM_TAG_COLORS.Training, text: "#c0ff72" },
+        { label: "Templates", ...COMMON_TAG_STYLES },
       ],
     },
     {
-      id: "tool-6",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      id: "gymbuddy-platform",
+      name: "GymBuddy India",
+      icon: "/images/gymbuddy_logo.png",
+      url: "https://gymbuddyindia.com/",
+      description:
+        "India's fitness social network — connecting gym-goers and helping them reach their goals.",
       tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Coding, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-7",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Design, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-8",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Content, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-9",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Productivity, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-10",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Coding, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-11",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Design, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-12",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Content, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-13",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Productivity, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-14",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Coding, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-15",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Design, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
-      ],
-    },
-    {
-      id: "tool-16",
-      name: "Insert title",
-      icon: "/icons/tech/command/placeholder.svg",
-      url: "#",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tags: [
-        { label: "Insert tag", bg: CATEGORY_COLORS.Content, text: "#fff" },
-        { label: "Insert category tag", ...COMMON_TAG_STYLES },
+        { label: "Platform", bg: GYM_TAG_COLORS.Platform, text: "#1a2009" },
+        { label: "Social", ...COMMON_TAG_STYLES },
       ],
     },
   ],
@@ -459,12 +328,9 @@ export const siteConfig: SiteConfig = {
   // BLOG / RSS FEED
   // ============================================
   blog: {
-    enabled: true,
-    // Add your RSS feed URL to fetch live blog posts (e.g., "https://yourblog.substack.com/feed")
-    // See docs/04-recent-blogs.md for the dynamic RSS component
+    enabled: false,
     feedUrl: "",
-    title: "Recent Blogs",
-    // Add your Substack URL to show a subscribe form (e.g., "https://yourblog.substack.com")
+    title: "Recent Posts",
     subscribeUrl: "",
   },
 };

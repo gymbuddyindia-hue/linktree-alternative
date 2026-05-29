@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/linktree-alternative" : "";
+
 const nextConfig: NextConfig = {
   // Static export for GitHub Pages
   output: "export",
 
-  // GitHub Pages subpath configuration
-  // Update this to match your repository name
-  basePath: "/linktree-alternative",
-  assetPrefix: "/linktree-alternative/",
+  // GitHub Pages subpath — only applied in production builds
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
 
   // Disable image optimization for static export
   images: {

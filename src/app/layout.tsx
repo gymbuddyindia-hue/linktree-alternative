@@ -24,7 +24,7 @@ export default function RootLayout({
   const hasAnalytics = analytics.googleAnalyticsId.length > 0;
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         {/* Google Analytics - only if configured */}
         {hasAnalytics && (
@@ -44,7 +44,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="antialiased">
+      <body className="antialiased" suppressHydrationWarning>
         {/* Background layer - fixed, behind all content */}
         {features.crtEffect && (
           <div className="fixed inset-0 z-0" aria-hidden="true">

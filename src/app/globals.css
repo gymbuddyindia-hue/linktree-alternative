@@ -56,7 +56,7 @@
   /* Brand primitives */
   --color-charcoal: #191919;
   --color-vanilla: #fffaee;
-  --color-accent: #fe5102;
+  --color-accent: #c0ff72;
 
   /* Shadows */
   --shadow-xs: var(--shadow-xs);
@@ -355,7 +355,7 @@ button,
 
 .badge-live {
   background: var(--bg-brand-solid);
-  color: var(--fg-white);
+  color: #0e1a02;
 }
 
 /* Card button - responsive (for dark cards with vanilla styling) */
